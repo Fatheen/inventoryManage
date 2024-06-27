@@ -45,8 +45,8 @@ function MainPage() {
       <div className="sort-container">
         <label>Sort by:</label>
         <select onChange={handleSortChange} value={sortType}>
-          <option value="title">Quantity</option>
-          <option value="quantity">Title Alphabetically</option>
+          <option value="title">Title</option>
+          <option value="quantity">Quantity</option>
         </select>
       </div>
       <div className="product-list">
