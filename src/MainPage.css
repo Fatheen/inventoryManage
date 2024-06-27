@@ -38,17 +38,17 @@
   
   .product-image {
     width: 100%;
-    height: 40px; /* Reduce height */
+    height: 70px; /* Reduce height */
     object-fit: cover;
   }
   
   .product-title {
-    font-size: 0.24em; /* Reduce font size */
+    font-size: 0.6em; /* Reduce font size */
     margin: 2px 0; /* Reduce margin */
   }
   
   .product-quantity {
-    font-size: 0.2em; /* Reduce font size */
+    font-size: 0.6em; /* Reduce font size */
     color: #555;
     margin-bottom: 2px; /* Reduce margin */
   }

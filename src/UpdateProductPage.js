@@ -28,15 +28,27 @@ function UpdateProductPage() {
     setSelectedProduct({ ...selectedProduct, quantity: newQuantity });
   };
 
+  const handleProductSelect = (e) => {
+    const selected = products.find(p => p.id === e.target.value);
+    setSelectedProduct(selected);
+  };
+
+  const handleQuantityChange = (e) => {
+    const value = parseInt(e.target.value, 10);
+    setQuantity(isNaN(value) ? '' : value);
+  };
+
   return (
     <div className="update-product-page">
       <h1>Update Product</h1>
-      <select onChange={(e) => setSelectedProduct(products.find(p => p.id === e.target.value))}>
-        <option value="">Select a product</option>
-        {products.map(product => (
-          <option key={product.id} value={product.id}>{product.title}</option>
-        ))}
-      </select>
+      {!selectedProduct && (
+        <select onChange={handleProductSelect}>
+          <option value="">Select a product</option>
+          {products.map(product => (
+            <option key={product.id} value={product.id}>{product.title}</option>
+          ))}
+        </select>
+      )}
       {selectedProduct && (
         <div className="product-card">
           <img src={selectedProduct.image} alt={selectedProduct.title} className="product-image" />
@@ -51,7 +63,8 @@ function UpdateProductPage() {
               type="number" 
               className="numpad-input" 
               value={quantity} 
-              onChange={(e) => setQuantity(parseInt(e.target.value) || 1)} 
+              onChange={handleQuantityChange} 
+              placeholder="1"
             />
             <button 
               className="numpad-button plus" 
