@@ -5,6 +5,16 @@
     min-height: 100vh;
   }
   
+  .sort-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .sort-container label {
+    margin-right: 10px;
+  }
+  
   .product-list {
     display: flex;
     flex-wrap: wrap;
