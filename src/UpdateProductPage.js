@@ -41,6 +41,7 @@ function UpdateProductPage() {
   return (
     <div className="update-product-page">
       <h1>Update Product</h1>
+      <h4>If you want to subtract shipped items ONLY use Daily Shipping Page</h4>
       {!selectedProduct && (
         <select onChange={handleProductSelect}>
           <option value="">Select a product</option>

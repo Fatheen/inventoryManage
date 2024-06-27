@@ -1,0 +1,46 @@
+/* src/StatisticsPage.css */
+.statistics-page {
+    padding: 20px;
+    background-color: #f4f4f9;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  .date-selector,
+  .month-selector {
+    margin-bottom: 20px;
+  }
+  
+  .date-selector label,
+  .month-selector label {
+    margin-right: 10px;
+  }
+  
+  .date-selector select,
+  .month-selector select {
+    padding: 10px;
+    font-size: 1em;
+  }
+  
+  .shipping-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .shipping-table th,
+  .shipping-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .shipping-table th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .shipping-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
